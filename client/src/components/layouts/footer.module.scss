@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  width: 800px;
+  margin: 50px auto 20px auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: "Yellowtail", cursive;
+  font-size: 32px;
+  color: black;
+  cursor: pointer;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  cursor: pointer;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+}
+
+.about {
+  cursor: pointer;
+  p {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+}

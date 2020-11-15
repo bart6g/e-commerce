@@ -1,0 +1,81 @@
+.box {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px 0px #3d3a3a;
+
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    border-radius: 10px;
+  }
+  h3 {
+    color: white;
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  p {
+    position: absolute;
+    bottom: 55px;
+    color: white;
+    left: 15px;
+    z-index: 2;
+  }
+}
+
+.btn {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: rgb(255, 0, 68);
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  border: 2px solid rgb(255, 0, 68);
+  margin: 10px;
+  transition: 0.6s;
+  overflow: hidden;
+  outline: none;
+  box-shadow: inset 0 0 0 0 #000;
+  border-radius: 6px;
+  z-index: 10;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 68);
+    box-shadow: inset 100px 0 0 0 white;
+    border: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e8e8e8;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.bg {
+  margin-top: 100px;
+  padding: 30px;
+  background-color: #e8e8e8;
+}

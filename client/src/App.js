@@ -8,14 +8,12 @@ import Register from "./components/pages/Register";
 import Sale from "./components/pages/Sale";
 import Men from "./components/pages/Men";
 import Women from "./components/pages/Women";
-import Slider from "./components/layouts/Slider";
+import Footer from "./components/layouts/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Slider />
-
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/login" component={Login} />
@@ -25,6 +23,7 @@ const App = () => {
         <Route path="/women" component={Women} />
         <Route path="/cart" component={Cart} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
