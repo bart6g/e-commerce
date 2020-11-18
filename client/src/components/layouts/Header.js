@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import styles from "./header.module.scss";
 import Button from "../atoms/Button";
 
 const Header = () => {
   const history = useHistory();
+  const [openedMenu, setOpenedMenu] = useState(false);
+
+  const handleOpenMenu = () => {
+    openedMenu ? setOpenedMenu(false) : setOpenedMenu(true);
+  };
 
   const signIn = () => {
     history.push("/signin");
@@ -17,7 +22,11 @@ const Header = () => {
     <div className={styles.bg}>
       <nav className={styles.nav}>
         <div className={styles.logo}>BG clothing</div>
-        <ul className={styles.links}>
+        <ul
+          className={`${styles.links} ${
+            openedMenu ? `${styles.linksActive}` : null
+          }`}
+        >
           <li className={styles.link}>
             <NavLink to="/" exact activeClassName={styles.active}>
               Home
@@ -45,8 +54,18 @@ const Header = () => {
           </li>
         </ul>
         <div className={styles.btns}>
-          <Button onClick={signIn}>Sign in</Button>
+          <Button onClick={signIn} className={styles.sign}>
+            Sign in
+          </Button>
           <Button onClick={handleCart} cart></Button>
+        </div>
+        <div
+          className={`${styles.cross} ${openedMenu ? `${styles.close}` : null}`}
+          onClick={() => handleOpenMenu()}
+        >
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
         </div>
       </nav>
     </div>

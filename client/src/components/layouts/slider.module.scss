@@ -20,7 +20,19 @@
 .container {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 50px;
-
+  margin-top: 150px;
   box-shadow: 8px 8px 20px 2px #3d3a3a;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    display: none;
+  }
 }

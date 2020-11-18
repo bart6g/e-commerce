@@ -4,14 +4,16 @@
 }
 
 .bg {
-  width: 800px;
   margin: 50px auto 20px auto;
 }
 
 .footer {
   display: flex;
+  max-width: 800px;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .logo {
   font-family: "Yellowtail", cursive;
@@ -42,5 +44,20 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .about {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logos {
+    margin-bottom: 20px;
   }
 }

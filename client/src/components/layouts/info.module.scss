@@ -71,7 +71,7 @@
   max-width: 1200px;
   flex-wrap: wrap;
   margin: 0 auto;
-
+  grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .bg {

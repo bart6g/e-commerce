@@ -17,11 +17,14 @@ const Mailing = () => {
               <input type="text" id="sname" />
             </div>
           </div>
-          <div className={styles.pair}>
+          <div className={styles.single}>
             <label htmlFor="email">Email</label>
             <input type="email" id="email" />
           </div>
-          <textarea name="texarea" id="textarea" cols="55" rows="10"></textarea>
+          <div className={styles.single}>
+            <label htmlFor="textarea">What's on your mind?</label>
+            <textarea name="texarea" id="textarea"></textarea>
+          </div>
         </form>
       </div>
     </div>
