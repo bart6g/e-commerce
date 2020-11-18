@@ -52,18 +52,6 @@ const Slider = () => {
         </Carousel.Item>
         <Carousel.Item interval={3000}>
           <div className={styles.box}>
-            <img className={styles.img} src={img3} alt="Third slide" />
-            <span></span>
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item interval={3000}>
-          <div className={styles.box}>
             <img className={styles.img} src={img4} alt="Third slide" />
             <span></span>
             <Carousel.Caption>

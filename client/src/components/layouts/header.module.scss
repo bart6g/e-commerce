@@ -81,27 +81,34 @@
 
 @media screen and (max-width: 768px) {
   .links {
-    display: none;
-    transition: width 0.3s ease;
+    flex-direction: column;
     clip-path: circle(100px at 90% -20%);
     -webkit-clip-path: circle(100px at 90% -20%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 20;
+    animation-name: menuDisactive !important;
+    -webkit-animation-name: menuDisactive !important;
+    // animation-delay: 1s;
+
+    transition: all 1s ease;
   }
   // .linksActive {
   //   display: flex;
   //   background-color: royalblue;
   // }
   .linksActive {
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
     background-color: #2d2d2d;
-    position: fixed;
-    z-index: 20;
-    flex-direction: column;
     transition: all 0.3s ease;
-    overflow: visible;
+    animation-name: menuActive;
+    -webkit-animation-name: menuActive;
+
+    // height: 100vh;
+    transition: all 1s ease;
+
     clip-path: circle(1050px);
     -webkit-clip-path: circle(1050px);
   }
@@ -147,5 +154,31 @@
     .line:nth-child(2) {
       opacity: 0;
     }
+  }
+}
+
+@keyframes menuDisactive {
+  from {
+    clip-path: circle(1050px);
+    -webkit-clip-path: circle(1050px);
+    // height: 100vh;
+  }
+  to {
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    // height: 0;
+  }
+}
+
+@keyframes menuActive {
+  from {
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    // height: 0;
+  }
+  to {
+    clip-path: circle(1050px);
+    -webkit-clip-path: circle(1050px);
+    // height: 100vh;
   }
 }
