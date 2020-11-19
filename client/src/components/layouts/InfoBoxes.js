@@ -31,6 +31,7 @@ const InfoBoxes = () => {
       <div className={styles.container}>
         {infoArr.map((info) => (
           <Info
+            key={info.title}
             img={info.img}
             title={info.title}
             desc={info.desc}

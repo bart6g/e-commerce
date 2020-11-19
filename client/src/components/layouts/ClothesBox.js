@@ -6,6 +6,7 @@ const ClothesBox = ({ topic, clothes }) => {
   const showClothes = clothes.map((item) => (
     <Clothes
       key={item.id}
+      id={item.id}
       title={item.title}
       price={item.price}
       img={item.img}
@@ -17,7 +18,6 @@ const ClothesBox = ({ topic, clothes }) => {
       <h3>Welcome to {topic} side</h3>
 
       <div className={styles.container}>{showClothes}</div>
- 
     </div>
   );
 };
